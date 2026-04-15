@@ -39,7 +39,7 @@ function actualizarPantalla(){
     limpiarCanva();
     dibujarSuelo();
     dibujarPersonaje();
-
+    dibujarLimon();
 }
 
 function limpiarCanva(){
@@ -53,4 +53,5 @@ function dibujarLimon(){
 
 function bajarLimon(){
     limonY = limonY + 10;
+    actualizarPantalla();
 }
