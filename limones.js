@@ -139,6 +139,10 @@ function reiniciarIntervaloJuego() {
     juegoIntervalo = setInterval(bajarLimon, velocidadCaidaIntervalo);
 }
 
+function reiniciar(){
+    iniciar();
+}
+
 document.addEventListener('keydown'), (event) => {
     if (vidas > 0 && puntaje < 10) { 
         if (event.key === 'ArrowLeft' || event.key === 'a') {
