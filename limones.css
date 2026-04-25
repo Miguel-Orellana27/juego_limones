@@ -1,31 +1,121 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* FONDO */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
+  background: linear-gradient(180deg, #000000, #020617, #000000);
   color: white;
   text-align: center;
-  margin: 0;
   padding: 20px;
 }
 
+/* CONTENEDOR */
 .contenedor {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: auto;
 }
 
+/* TITULO NEON */
+.titulo {
+  font-size: 42px;
+  color: #00ffff;
+  text-shadow: 
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #0ea5e9;
+}
+
+/* SUB */
+.subtitulo {
+  color: #f0abfc;
+  margin-bottom: 10px;
+}
+
+.autor {
+  color: #22c55e;
+  margin-bottom: 20px;
+}
+
+/* CANVAS MARCO */
+.marco-canvas {
+  padding: 12px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #0f172a, #000);
+  box-shadow:
+    0 0 20px #00ffff,
+    inset 0 0 10px #0ea5e9;
+}
+
+/* CANVAS */
 canvas {
-  background-color: #111827;
-  border: 3px solid #38bdf8;
+  background: #020617;
+  border: 3px solid #00ffff;
+  border-radius: 10px;
   display: block;
-  margin: 20px auto;
+  margin: auto;
 }
 
+/* PANEL */
 .panel {
   margin: 20px 0;
+  font-size: 20px;
 }
 
+.panel span {
+  color: #facc15;
+  text-shadow: 0 0 10px #facc15;
+}
+
+/* BOTONES */
+.botones {
+  margin-top: 20px;
+}
+
+/* BOTONES GEOMETRY DASH */
 .botones button {
-  margin: 5px;
-  padding: 10px 16px;
-  font-size: 16px;
+  margin: 8px;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  border-radius: 12px;
+  border: none;
   cursor: pointer;
+
+  background: linear-gradient(145deg, #00ffff, #0ea5e9);
+  color: black;
+
+  box-shadow:
+    0 0 15px #00ffff,
+    0 0 25px #00ffff;
+
+  transition: 0.2s;
+}
+
+/* HOVER */
+.botones button:hover {
+  transform: scale(1.15);
+  box-shadow:
+    0 0 25px #00ffff,
+    0 0 40px #38bdf8;
+}
+
+/* CLICK */
+.botones button:active {
+  transform: scale(0.9);
+}
+
+/* EFECTO PARPADEO */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #00ffff; }
+  50% { box-shadow: 0 0 25px #00ffff; }
+  100% { box-shadow: 0 0 10px #00ffff; }
+}
+
+.marco-canvas {
+  animation: glow 2s infinite;
 }
