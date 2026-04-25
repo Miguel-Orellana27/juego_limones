@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caza Estrellas</title>
+  <link rel="stylesheet"  href="limones.css"/>
+ <script src="utlis.js"></script>
+ 
+</head>
+<body onload="iniciar();">
+  <div class="contenedor">
+    <h1>Atrapar Limones</h1>
+    <p>Si del cielo te caen limones ..... </p>
+    <h2> Autor: Miguel Orellana</h2>
+    <canvas id="areaJuego"  width="600" height="400"></canvas>
+    <div class="panel">
+      <p>Puntaje: <span id="txtPuntaje">0</span></p>
+      <p>Vidas: <span id="txtVidas">3</span></p>
+    </div>
+    <div class="botones">
+      <button onclick="moverIzquierda();">Izquierda</button>
+      <button onclick="moverDerecha();">Derecha</button>
+      <button onclick="bajarLimon();">Bajar limon</button>
+      <button onclick="reiniciar();">Reiniciar</button>
+    </div>
+  </div>
+  <script src="limones.js"></script>
+</body>
+</html>
